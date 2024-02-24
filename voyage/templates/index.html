@@ -1,0 +1,761 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    {% load static %}
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Visa & Voyage</title>
+    <link rel="icon" href="{% static 'img/icone.png' %}"id="iconec">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+    <!-- themify CSS -->
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}">
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}">
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}">
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <!--::header part start::-->
+    <style>
+        /* Styles CSS pour la démo seulement */
+        
+        
+        section {
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+        }
+        .house-ui {
+            display: inline-block;
+            width: 70px; /* Largeur de l'icône */
+            height: 70px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/house2.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+        .airport-ui {
+            display: inline-block;
+            width: 70px; /* Largeur de l'icône */
+            height: 70px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/airport.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+
+        .passport-ui {
+            display: inline-block;
+            width: 70px; /* Largeur de l'icône */
+            height: 70px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/passport.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+        .passport2-ui {
+            display: inline-block;
+            width: 35px; /* Largeur de l'icône */
+            height: 35px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/passport.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+
+        .support-ui {
+            display: inline-block;
+            width: 70px; /* Largeur de l'icône */
+            height: 70px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/support.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+        
+        .knowledge-ui {
+            display: inline-block;
+            width: 35px; /* Largeur de l'icône */
+            height: 35px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/knowledge.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+
+        .teacher-ui {
+            display: inline-block;
+            width: 35px; /* Largeur de l'icône */
+            height: 35px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/teacher.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+
+        .single_our_project {
+            margin-bottom: 20px; /* Ajoute de l'espace entre chaque élément */
+        }
+        .whatsapp-ui {
+            display: inline-block;
+            width: 70px; /* Largeur de l'icône */
+            height: 70px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/whatsapp.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+
+        .facebook-ui {
+            display: inline-block;
+            width: 70px; /* Largeur de l'icône */
+            height: 70px; /* Hauteur de l'icône */
+            background-image: url("{% static 'img/facebook.png' %}"); /* Chemin vers votre image */
+            background-size: cover; /* Assurez-vous que l'image couvre entièrement l'élément */
+            /* Si nécessaire, vous pouvez ajuster la position de l'image pour cadrer correctement l'icône */
+            background-position: center center; 
+        }
+        #whats {
+        border: 2px solid transparent; /* Assurez-vous que le div ait une bordure de 2px, même si elle est initialement transparente */
+        border-radius: 20px; /* Ajoutez des coins arrondis */
+        border: 2px solid lightgreen;
+        box-shadow: 0 0 10px 2px lightgreen;
+        
+        }
+
+        #face {
+            border: 2px solid transparent; /* Assurez-vous que le div ait une bordure de 2px, même si elle est initialement transparente */
+            border-radius: 20px; /* Ajoutez des coins arrondis */
+            border: 2px solid lightblue;
+            box-shadow: 0 0 10px 2px lightblue;
+            
+            
+        }
+        #whats, #face {
+            width: 85%; /* Réduire la largeur à 80% de la largeur parente */
+            margin-left: 50px;
+        }
+        #logoc {
+        width: 180px; /* Remplacez la valeur par la taille désirée */
+        height: auto; /* La hauteur est ajustée automatiquement pour maintenir les proportions */
+        }
+        #textchi {
+        font-size: 58px; /* Taille de la police en pixels */
+        
+        }
+
+      
+            
+    </style>
+    <header class="main_menu home_menu">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="navbar-brand" href="#accueil" > <img src="{% static 'img/logocouleur.png' %}" alt="logo" id="logoc"> </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="ti-menu"></span>
+                        </button>
+
+                        <div class="collapse navbar-collapse main-menu-item justify-content-end"
+                            id="navbarSupportedContent">
+                            <ul class="navbar-nav align-items-center">
+                                <li class="nav-item"><a class="nav-link" href="#accueil">Accueil</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#aventage">Avantages</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#visa">Visa</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#destination">Destination</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#temoignage">Témoignage</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                                
+                                 <!--<li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Pages
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="project.html">project</a>
+                                        <a class="dropdown-item" href="project_details.html">project details</a>
+                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
+                                        <a class="dropdown-item" href="elements.html">Elements</a>
+                                    </div>
+                                </li>-->
+                                
+                                 <!--<li class="d-none d-lg-block">
+                                    <a class="btn_1" href="#">Get a Quote</a>
+                                </li>-->
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <!-- Header part end-->
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+
+    <!-- banner part start-->
+    <section class="banner_part" id="accueil">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-9 col-xl-6">
+                    <div class="banner_text">
+                        <div class="banner_text_iner">
+                            <h1 id="textchi">Etudiez et travaillez à l'étranger en toute confiance nous nous occupons de votre    
+                                <span>VISA</span></h1>
+                            
+                            <!-- <a href="#" class="btn_1">View project </a>-->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- banner part start-->
+
+     <!-- our_service start-->
+     <section class="our_service padding_top" id="aventage">
+        <div class="container">
+            <div class="row">
+                <div class="col-x1-10">
+                    <div class="section_tittle">
+                        <h2>Nos avantages</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6 col-sm-12 mb-4">
+                    <div class="single_feature">
+                        <div class="single_service">
+                            <span class="passport-ui"></span>
+                            <h4>Facilité de procédure de visa</h4>
+                            <p>Nous prenons en charge toutes les démarches administratives liées aux visas, que ce soit pour des voyages d'études, des visites touristiques ou des formations professionnelles.</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-lg-6 col-sm-12 mb-4">
+                    <div class="single_feature">
+                        <div class="single_service">
+                            <span class="house-ui"></span>
+                            <h4>Logement gratuit</h4>
+                            <p>Pendant leur première période à l'étranger, nos clients bénéficient de logement gratuit sur une durée variant de 1 à 6 mois leur permettant de s'installer en toute tranquillité</p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="w-100"></div><!-- Ajoute un espace vertical entre les lignes -->
+            
+                <div class="col-lg-6 col-sm-12 mb-4">
+                    <div class="single_feature">
+                        <div class="single_service single_service_2">
+                            <span class="support-ui"></span>
+                            <h4>Aide administrative sur place</h4>
+                            <p>Nous sommes là pour accompagner nos clients dans toutes les démarches administratives sur le territoire étranger offrant ainsi un soutien continu tout au long de leur séjour </p>
+                        </div>
+                    </div>
+                </div>
+            
+                <div class="col-lg-6 col-sm-12 mb-4">
+                    <div class="single_feature">
+                        <div class="single_service single_service_2">
+                            <span class="airport-ui"></span>
+                            <h4>Assistance à l'aéroport</h4>
+                            <p>Une fois arrivé à destination, nos clients bénéficient d'une assistance personnalisée à l'aéroport, les aidant à se familiariser avec leur nouvel environnement dès leur arrivée</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+    <!-- our_service part end-->
+
+    <!-- about part start-->
+    <section class="about_part section_padding" id="visa">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-6">
+                    <div class="about_part_img">
+                        <img src="{% static 'img/smiley-woman.png' %}" alt="">
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="about_part_text ml-lg-5 ml-xl-8 ">
+                        <h2>Nos services de visa ouvrent les portes du voyage en toute simplicité</h2>
+                        <p>Nous comprenons l'importance d'un processus de visa fluide et sans tracas. C'est pourquoi nous proposons une gamme complète de services de visa pour répondre à tous vos besoins de voyage</p>
+                        <ul>
+                            <li>
+                                <span class="knowledge-ui"></span>
+                                <h3>Visa Etude</h3>
+                                <p>Visa destiné aux personnes désirant poursuivre leurs études à l'extérieur du pays, que ce soit dans des écoles privées ou publiques.</p>
+                            </li>
+                            <li>
+                                <span class="teacher-ui"></span>
+                                <h3>Formation professionnelle</h3>
+                                <p>Visa destiné aux personnes désirant obtenir une compétence par le biais d'une formation afin de vite trouver un emploi</p>
+                            </li>
+                            <li>
+                                <span class="passport2-ui"></span>
+                                <h3>Visa visiteur</h3>
+                                <p>Visa destiné aux personnes désirant découvrir de nouvelles destinations</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- about part end-->
+
+   
+
+    <!-- about part start-->
+    <!--<section class="about_part experiance_part section_padding">
+        <div class="container">
+            <div class="row align-items-center justify-content-between">
+                <div class="col-md-6 col-lg-6">
+                    <div class="about_part_text">
+                        <h2>We Are Experience
+                                in Construction</h2>
+                        <p>Their whose made waters there our, air above first give dry fruit that second whose herb creeping it us light spirit appear mans. So green abundantly She'd. Greater divide dry bearing years ourends herb upon which open lights had blessed replenish Cattle give his. Abundantly over saying which beast dominion multiply behold to wateo.</p>
+                        <div class="about_text_iner">
+                            <div class="about_text_counter">
+                                <h2>20</h2>
+                            </div>
+                            <div class="about_iner_content">
+                                <h3>year <span>of Experience</span></h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-6">
+                    <div class="about_part_img">
+                        <img src="{% static 'img/experiance_img.png' %}" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- about part end-->
+
+    <!-- our_project part start-->
+    <section class="our_project section_padding" id="portfolio">
+        <div class="container" >
+            <div class="row justify-content-between" id="destination">
+                <div class="col-lg-6 col-sm-10">
+                    <div class="section_tittle">
+                        <h2 >Nos destinations</h2>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-13">
+                    <div class="filters portfolio-filter project_menu_item">
+                        <ul>
+                            <li class="active" data-filter="*">Tous</li>
+                            <li data-filter=".canada">Canada</li>
+                            <li data-filter=".france">France</li>
+                            <li data-filter=".russie">Russie</li>
+                            <li data-filter=".bresil">Brésil</li>
+                            <li data-filter=".usa">USA</li>
+                            <li data-filter=".belgique">Espace schengen</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="filters-content">
+                <div class="row justify-content-between portfolio-grid">
+                    <div class="col-lg-4 col-sm-6 all canada">
+                        <div class="single_our_project">
+                            <div class="single_offer">
+                                <img src="{% static 'img/canada.png ' %}" alt="offer_img_1">
+                                <div class="hover_text">
+                                    <p>Visa / Formation Professionnelle</p>
+                                    <a ><h2>CANADA</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 all france">
+                        <div class="single_our_project">
+                            <div class="single_offer">
+                                <img src="{% static 'img/france.png' %}" alt="offer_img_2">
+                                <div class="hover_text">
+                                    <p>Visa Étude</p>
+                                    <a><h2>FRANCE</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 all russie">
+                        <div class="single_our_project">
+                            <div class="single_offer">
+                                <img src="{% static 'img/russie.png' %}" alt="offer_img_2">
+                                <div class="hover_text">
+                                    <p>Visa Visiteur / Visa Étude</p>
+                                    <a ><h2>RUSSIE</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 all bresil">
+                        <div class="single_our_project">
+                            <div class="single_offer">
+                                <img src="{% static 'img/brésil.png' %}" alt="offer_img_2">
+                                <div class="hover_text">
+                                    <p>Visa Visiteur</p>
+                                    <a><h2>BRÉSIL</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 all usa">
+                        <div class="single_our_project">
+                            <div class="single_offer">
+                                <img src="{% static 'img/usa.png' %}" alt="offer_img_2">
+                                <div class="hover_text">
+                                    <p>Visa Étude</p>
+                                    <a ><h2>USA</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 all belgique">
+                        <div class="single_our_project">
+                            <div class="single_offer">
+                                <img src="{% static 'img/belgique.png' %}" alt="offer_img_2">
+                                <div class="hover_text">
+                                    <p>Visa Visiteur </p>
+                                    <a ><h2>BELGIQUE</h2></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- our_project part end-->
+
+    <!-- member_counter counter start -->
+    <!-- <section class="member_counter padding_bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_counter_icon">
+                        <img src="{% static 'img/icon/Icon_1.svg' %}" alt="">
+                    </div>
+                    <div class="single_member_counter">
+                        <span class="counter">60</span>
+                        <h4> <span>Satisfied</span> Client</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_counter_icon">
+                        <img src="{% static 'img/icon/Icon_2.svg' %}" alt="">
+                    </div>
+                    <div class="single_member_counter">
+                        <span class="counter">10</span>
+                        <h4> <span>Worldwide</span> Branches</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_counter_icon">
+                        <img src="{% static 'img/icon/Icon_3.svg' %}" alt="">
+                    </div>
+                    <div class="single_member_counter">
+                        <span class="counter">80</span>
+                        <h4> <span>Total</span> Projects</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-6">
+                    <div class="single_counter_icon">
+                        <img src="{% static 'img/icon/Icon_4.svg' %}" alt="">
+                    </div>
+                    <div class="single_member_counter">
+                        <span class="counter">24</span>
+                        <h4> <span>Work</span> Finished</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>-->
+    <!-- member_counter counter end -->
+
+     <!--::blog_part start::-->
+     
+    <!-- review part start-->
+    <section class="review_part section_padding" id="temoignage">
+        <div class="container-fluid">
+            <div class="row align-items-center justify-content-end">
+                <div class="col-lg-5 col-xl-4">
+                    <div class="tour_pack_text">
+                        <h2>Témoignage de nos clients</h2>
+                        <p>Réalisez vos rêves de voyage avec nos services de visa et nos opportunités</p>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-sm-12">
+                    <div class="review_part_cotent owl-carousel">
+                        <div class="single_review_part">
+                            <img src="{% static 'img/client/femme1.png' %}" alt="">
+                            <div class="tour_pack_content">
+                                <p>Grâce à cette agence de voyage, mon visa d'études en Russie a été très cool. Ils ont été efficaces, m'ont aidé à trouver un logement à mon arrivée. Leur aide et leur disponibilité m'ont beaucoup plu</p>
+                                <h4>Russie</h4>
+                            </div>
+                        </div>
+                        <div class="single_review_part">
+                            <img src="{% static 'img/client/homme1.png' %}" alt="">
+                            <div class="tour_pack_content">
+                                <p> Je suis tellement reconnaissant envers l'agence de voyage pour leur aide précieuse dans l'obtention de mon visa d'études en France. Grâce à leur soutien, j'ai pu réaliser mon rêve d'étudier à l'étranger. Si vous voulez voyager, passez par eux, vous ne serez pas déçu</p>
+                                <h4>France</h4>
+                            </div>
+                        </div>
+                        <div class="single_review_part">
+                            <img src="{% static 'img/client/femme2.png' %}" alt="">
+                            <div class="tour_pack_content">
+                                <p>Mon expérience avec cette agence de voyage pour obtenir mon visa de visiteur pour le Canada a été exceptionnelle. Leur équipe était extrêmement professionnelle et compétente, et ils ont rendu tout le processus sans tracas. Une fois arrivé au Canada, ils m'ont installé confortablement. Je suis reconnaissante pour leur service de qualité et je les recommande à tous ceux qui cherchent à visiter le Canada</p>
+                                <h4>Canada</h4>
+                            </div>
+                        </div>
+                        <div class="single_review_part">
+                            <img src="{% static 'img/client/homme2.png' %}" alt="">
+                            <div class="tour_pack_content">
+                                <p>J'ai toujours rêvé de poursuivre mes études aux États-Unis, et c'est grâce à l'agence de voyage que j'ai réussi à réaliser mon ambition. Ils ont pris en charge toutes les formalités de visa et m'ont aidé à trouver le meilleur cursus professionnel qui correspondait à mes objectifs de carrière. Je suis extrêmement reconnaissant pour leur soutien</p>
+                                <h4>USA</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- review part end-->
+
+   
+    <!--::blog_part end::-->
+
+    <!-- ================ contact section start ================= -->
+  
+
+  <section class="our_service padding_top" id="contact" style="margin-top: 100px;">
+    <div class="container">
+        <div class="row">
+            <div class="col-x1-10">
+                <div class="section_tittle">
+                    <h2>Contactez nous</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-lg-5 col-sm-12 mb-4">
+                <div class="single_feature">
+                    <div class="single_service" id="whats">
+                        
+                            <span class="whatsapp-ui"></span>
+                            
+                            <h4>sur whatsapp</h4>
+                            <a class="btn_w" href="https://wa.me/92044549">Cliquez ici</a>
+                        
+                    </div>
+                </div>
+            </div>
+        
+            <div class="col-lg-5 col-sm-12 mb-4">
+                <div class="single_feature">
+                    <div class="single_service" id="face">
+                        <span class="facebook-ui"></span>
+                                <h4>sur facebook</h4>
+                                <a class="btn_f" href="https://www.facebook.com/profile.php?id=61556421390240&mibextid=ZbWKwL">Cliquez ici</a>
+                    </div>
+                </div>
+            </div>
+        
+           
+        
+            
+        
+            
+        </div>
+        
+    </div>
+</section>
+  <!-- ================ contact section end ================= -->
+
+    <!-- footer part start-->
+    <footer class="footer-area"style="margin-top: 100px;">
+        
+        <div class="container">
+            <div class="row justify-content-between">
+                <div class="col-sm-6 col-md-4 col-xl-3">
+                    <div class="single-footer-widget footer_1">
+                        <a > <img src="{% static 'img/Plandetravail2copie.png' %}" alt=""> </a>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Nos services offret</h4>
+                        <div class="contact_info">
+                            <ul>
+                                <li>
+                                    <a href="#aventage">Aventage</a>
+                                </li>
+                                <li>
+                                    <a href="#visa">Visa</a>
+                                </li>
+                                <li>
+                                    <a href="#destination">Destination</a>
+                                </li>
+                                <li>
+                                    <a href="#contact">Contact</a>
+                                </li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Our Gallery</h4>
+                        <div class="footer_img">
+                            <a href="#"><img src="{% static 'img/footer_img/footer_1.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_2.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_3.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_4.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_5.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_6.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_7.png' %}" alt=""></a>
+                            <a href="#"><img src="{% static 'img/footer_img/footer_8.png' %}" alt=""></a>
+                        </div>
+                    </div>
+                </div>-->
+                <div class="col-xl-3 col-sm-6 col-md-4">
+                    <div class="single-footer-widget footer_2">
+                        <h4>Contact info</h4>
+                        <div class="contact_info"> 
+                            <p><span> Address :</span> Agbalépédo proche de la pharmacie vigeur</p>
+                            
+                            <p><span> Phone :</span> +228 92 04 45 49</p>
+                            <p><span> Email : </span>visaetvoyage8@gmail.com </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="copyright_part_text text-center">
+                        <div class="row">
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+
+    <!-- jquery plugins here-->
+    <!-- jquery -->
+    <script src="{% static 'js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <!-- isotope js -->
+    <script src="{% static 'js/isotope.pkgd.min.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function(){
+        // Ajoutez une animation de défilement lent à tous les liens d'ancrage internes
+        $("a[href^='#']").on('click', function(event) {
+            var target = $(this.getAttribute('href'));
+            if( target.length ) {
+                event.preventDefault();
+                $('html, body').stop().animate({
+                    scrollTop: target.offset().top
+                }, 1000); // Réglez la durée de l'animation (en millisecondes)
+            }
+        });
+    });
+    function changeColor(id, bgColor, textColor) {
+        var element = document.getElementById(id);
+        element.style.backgroundColor = bgColor;
+        element.getElementsByTagName('a')[0].style.color = textColor;
+        element.getElementsByTagName('h4')[0].style.color = textColor; // Change également la couleur du texte pour le h4
+    }
+
+    function resetColor(id, defaultBgColor, defaultTextColor) {
+        var element = document.getElementById(id);
+        element.style.backgroundColor = defaultBgColor;
+        element.getElementsByTagName('a')[0].style.color = defaultTextColor;
+        element.getElementsByTagName('h4')[0].style.color = defaultTextColor; // Réinitialise également la couleur du texte pour le h4
+    }
+
+    document.addEventListener("DOMContentLoaded", function() {
+        var whatsElement = document.getElementById("whats");
+        var faceElement = document.getElementById("face");
+
+        whatsElement.addEventListener("mouseover", function() {
+            changeColor("whats", "green", "white");
+        });
+
+        whatsElement.addEventListener("mouseout", function() {
+            resetColor("whats", "", "");
+        });
+
+        faceElement.addEventListener("mouseover", function() {
+            changeColor("face", "blue", "white");
+        });
+
+        faceElement.addEventListener("mouseout", function() {
+            resetColor("face", "", "");
+        });
+    });
+</script>
+
+</body>
+
+</html>
